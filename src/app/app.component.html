@@ -1,23 +1,24 @@
 <!-- Div contenant le titre et le logo de la page -->
-<div class="page_title" role="banner">
-  <h1><img width="40" alt="FreeTirage Logo" src=""/>FreeTirage</h1>
-  <!-- <img
-    width="40"
-    alt="FreeTirage Logo"
-    src=""
-  /> -->
-  <p>© Copyright 2022 FreeTirage</p>
+<div class="page_title">
+  <div class="company">
+      <div class="company_logo"><img src="../assets/logo.svg"></div>
+      <div  class="company_name"><span>FreeTirage</span></div>
+  </div>
 </div> 
 
  <!-- div contenant le menu a gauche -->
 <div class="left_menu">
-  <span>Accueil</span>
-  <span>Statistiques</span>
-  <span>Liste</span>
-  <span>Tirage</span>
+  <ul>
+    <a  routerLink="accueil" 
+    routerLinkActive="active"><label>Accueil</label></a>
+    <a><label>Statistiques</label></a>
+    <a href="#"><label>labelste</label></a>
+    <a href="#"><label>Tirage</label></a>
+  </ul>
 </div>
 
 <!-- div contenant le principal contenu de la page -->
+
 <div class="main_content">
   <router-outlet></router-outlet>
 </div>
