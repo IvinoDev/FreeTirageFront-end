@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
-import { ListepostulantComponent } from './listepostulant/listepostulant.component';
+import { ListesComponent } from './listes/listes.component';
 import { ListetiresComponent } from './listetires/listetires.component';
 import { TirageComponent } from './tirage/tirage.component';
 
@@ -18,6 +18,10 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
+    path:"listes",
+    component:ListesComponent
+  },
+  {
     path:"tirage",
     component:TirageComponent
   },
@@ -25,11 +29,8 @@ const routes: Routes = [
     path:"listetires",
     component:ListetiresComponent
 
-  }, 
-  {
-    path:"listepostulant",
-    component:ListepostulantComponent
-  }
+  },
+ 
 ];
 
 @NgModule({

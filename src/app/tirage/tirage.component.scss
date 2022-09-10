@@ -43,3 +43,59 @@
     font-size: 10px;
 
 }
+.saisie{
+//     position: absolute;
+// width: 498px;
+// height: 40px;
+// left: 275px;
+// top: 299px;
+
+
+
+position: absolute;
+width: 300px;
+height: 24px;
+left: 0px;
+top: 10px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #000000;
+background: #E6E6E6;
+margin-left: 50px;
+
+
+
+}
+.champ{
+    position: absolute;
+width: 196px;
+height: 30px;
+left: 275px;
+top: 512px;
+
+}
+.send{
+    position: absolute;
+width: 196px;
+height: 30px;
+left: 100px;
+top: 150px;
+background: #FF7900;
+border-radius: 6px;
+box-sizing: border-box;
+border: none;
+color: white;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+}
