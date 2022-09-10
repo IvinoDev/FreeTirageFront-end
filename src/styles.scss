@@ -1,5 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importation pour utiliser la police Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Importation pour utiliser les icônes de Bootsrap */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 div {
     font-family: 'Poppins', Roboto, Helvetica, sans-serif;
@@ -8,5 +10,9 @@ div {
 body{
     margin: 0;
     padding: 0;
+}
+
+h1, h2 {
+    font-weight: bold;
 }
 
