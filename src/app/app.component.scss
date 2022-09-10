@@ -52,15 +52,14 @@ h1 {
     position: fixed;
     top: 60px;
     z-index: 3;
-    
 }
 
 .main_content{
     float: right;
     top: 70px;
     position: relative;
-    width: 70%;
     left: 0;
+    width: calc(100% - 250px)
 }
 
 .page_title{

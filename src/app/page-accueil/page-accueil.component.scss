@@ -2,11 +2,54 @@ h1 {
     color: #FF7900
 }
 
-.first_heading, .statistique{
-   margin-left: -150px;
-}
 
 .stats_main h2 {
     display: inline-flex;
 
+}
+.stats-container {
+    display: flex;
+    width: 100%;
+}
+.stat {
+    width: 100%;
+    text-align: center;
+}
+.stat-title {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.stat-title h2 {
+    margin: 0;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.stat .number {
+    color: #ff7900;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+table.table.align-middle {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table.table.align-middle thead {
+    color: #fff;
+    background: #ff7900;
+}
+
+table.table.align-middle tr {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+table.table.align-middle td {
+    text-align: center;
+}
+table.table.align-middle th, table.table.align-middle td {
+    padding: 5px 0;
 }
