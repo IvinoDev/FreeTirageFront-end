@@ -1,0 +1,40 @@
+h1 {
+    color: #FF7900;
+    font-weight: 800;
+    font-size: 21px;
+    font-family: Poppins;
+}
+
+.tirage_forms {
+    display: flex;
+    width: 100%;
+}
+
+.import_form {
+    width: 40%;
+    text-align: left;
+}
+
+.list_form {
+    width: 40%;
+    text-align: left;
+}
+
+.form_title {
+    padding: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    background-color: black;
+    
+}
+
+.form_body {
+    background-color: #F8F8F8;
+    width: 40%;
+    float: left;
+    padding: 2%;
+    box-sizing: border-box;
+}
+

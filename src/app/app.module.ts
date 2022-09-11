@@ -7,6 +7,7 @@ import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { DetailsListeComponent } from './details-liste/details-liste.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { TirageComponent } from './tirage/tirage.component';
 
 
 
@@ -14,7 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
   declarations: [
     AppComponent,
     PageAccueilComponent,
-    DetailsListeComponent
+    DetailsListeComponent,
+    TirageComponent
   ],
   imports: [
     BrowserModule,
