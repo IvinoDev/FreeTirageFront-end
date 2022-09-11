@@ -4,17 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
+import { DetailsListeComponent } from './details-liste/details-liste.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageAccueilComponent
+    PageAccueilComponent,
+    DetailsListeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

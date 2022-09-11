@@ -1,7 +1,12 @@
-h1 {
-    color: #FF7900
+.first_heading span, .stats span {
+    color: #FF7900;
+    font-weight:800;
+    font-size: 21px;
 }
 
+.stats_main {
+    margin-top: 20px;
+}
 
 .stats_main h2 {
     display: inline-flex;
@@ -25,6 +30,12 @@ h1 {
     font-size: 18px;
     padding: 8px;
 }
+
+.top-lists h2 {
+    font-size: 14px;
+    padding: 8px;
+}
+
 
 .stat .number {
     color: #ff7900;
@@ -51,5 +62,71 @@ table.table.align-middle td {
     text-align: center;
 }
 table.table.align-middle th, table.table.align-middle td {
-    padding: 5px 0;
+    padding: 6px 0;
+}
+
+.main_list {
+    margin-left: 100px;
+    margin-right: 150px;
+}
+
+.top-lists {
+    padding-bottom: 50px;
+}
+
+.info {
+    color: black;   
+}
+
+.info:hover {
+    color: #FF7900;
+}
+
+.button1 {
+    color: white;
+    background-color: #FF7900;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    width: 150px;
+    font-weight: 600;
+    margin: 4px 2px;
+    padding: 6px 16px;
+    position: relative;
+    margin-left: 70%;
+    
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #FF7900;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 4px 2px;
+}
+
+.button3 {
+    color: white;
+        background-color: #FF7900;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition-duration: 0.4s;
+        margin: 4px 2px;
+        padding: 7px 16px;
+}
+
+.button1:hover, .button3:hover {
+    background-color: #000000;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }

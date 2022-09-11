@@ -1,10 +1,12 @@
 <div class="first_heading">
-    <h1>Bienvenue sur FreeTirage</h1>
+    <span>Bienvenue sur FreeTirage</span>
     <p>La meilleure plateforme pour faire un tirage</p>
+    <br>
+    <!-- <app-details-liste></app-details-liste> pour injecter un component-->
 </div>
 
 <div class="stats">
-    <h1 class="statistique">Nos Statistiques</h1>
+    <span class="statistique">Nos Statistiques</span>
     <div class="stats_main">
       <div class="stats-container">
         <div class="stat">
@@ -13,7 +15,7 @@
           </div>
           <div class="stat-body">
             <div class="number">299</div>
-            <div class="icon"></div>
+            <div class="icon"><mat-icon fontIcon="list"></mat-icon></div>
             <div class="text">
               <p>Listes tirées</p>
             </div>
@@ -37,7 +39,8 @@
 
 <div class="top_lists">
     <h2>Top listes</h2>
-    <div>
+    <br>
+    <div class="main_list">
         <table class="table align-middle">
             <thead>
               <tr>
@@ -54,28 +57,28 @@
                 <td>Libelle</td>
                 <td>Date</td>
                 <td>Nombre de tirage</td>
-                <td><a href="#">Action</a></td>
+                <td><a href="#"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
               </tr>
               <tr>
                 <td>Numéro</td>
                 <td>Libelle</td>
                 <td>Date</td>
                 <td>Nombre de tirage</td>
-                <td><a href="#">Action</a></td>
+                <td><a href="#"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
               </tr>
               <tr>
                 <td>Numéro</td>
                 <td>Libelle</td>
                 <td>Date</td>
                 <td>Nombre de tirage</td>
-                <td><a href="#">Action</a></td>
+                <td><a href="#"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
               </tr>
               <tr>
                 <td>Numéro</td>
                 <td>Libelle</td>
                 <td>Date</td>
                 <td>Nombre de tirage</td>
-                <td><a href="#">Action</a></td>
+                <td><a href="#"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
               </tr>
               <tr>
                 <td>Numéro</td>
@@ -83,10 +86,14 @@
                 <td>Date</td>
                 <td>Nombre de tirage</td>
                 <td>
-                  <a href="#">Action</a>
+                  <a href="#"><mat-icon class='info' fontIcon="info"></mat-icon></a>
                 </td>
               </tr>
             </tbody>
           </table>
     </div>
 </div>
+<br>
+<a href="#"><button class="button1">Suivant</button></a>
+<button class="button2">1/5</button>
+<a href="#"><button class="button3">Effectuer un tirage</button></a>
