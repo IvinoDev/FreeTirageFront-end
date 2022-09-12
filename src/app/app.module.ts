@@ -12,13 +12,14 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PageAccueilComponent,
     DetailsListeComponent,
     TirageComponent,
-    DetailsTirageComponent
+    DetailsTirageComponent,
   ],
   imports: [
     BrowserModule,

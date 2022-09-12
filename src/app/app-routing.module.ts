@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { TirageComponent } from './tirage/tirage.component';
+import { DetailsListeComponent } from './details-liste/details-liste.component';
+
 
 
 const routes: Routes = [
@@ -21,7 +23,17 @@ const routes: Routes = [
   },
 
    {path: "tirage", 
-  component: TirageComponent}
+  component: TirageComponent},
+
+  {
+    path:"",
+    redirectTo : "detailsliste",
+    pathMatch:'full'
+  },
+
+  {path: "detailsliste", 
+  component: DetailsListeComponent}
+
 
 ];
 
