@@ -5,7 +5,22 @@
             <p>Effectuez un tirage depuis<br> une liste importée</p>
         </div>
         <div class="form_body">
-        
+            <form action="#">
+                <br>
+                <input type="file" class="file" name="file" placeholder="Choisir un fichier Excel">
+                <br>
+                <br>
+                <input type="text" class="new_list_name" placeholder="Libellé de la liste">
+                <br>
+                <br>
+                <input type="text" class="new_ldraw_name" placeholder="Libellé du tirage">
+                <br>
+                <br>
+                <input type="text" class="ldraw_number" placeholder="Nombre de postulants à tirer">
+                <br>
+                <br>
+                <button class="button4">Importer et tirer</button>
+            </form>
         </div>
     </div>
     <div class="list_form">
@@ -13,7 +28,24 @@
             <p>Tirage depuis une liste<br> déjà existante</p>
         </div>
         <div class="form_body">
-
+            <form action="#">
+                <br>
+                <!-- <input type="text" class="all_lists" placeholder="Listes"> -->
+                <select class="lists" name="lists">
+                    <option value="Liste 1">Liste 1</option>
+                    <option value="Liste 2">Liste 2</option>
+                    <option value="Liste 3">Liste 3</option>
+                </select>
+                <br>
+                <br>
+                <input type="text" class="new_ldraw_name" placeholder="Libellé du tirage">
+                <br>
+                <br>
+                <input type="text" class="post_number" placeholder="Nombre de postulants à tirer">
+                <br>
+                <br>
+                <button class="button4">Effectuer un tirage</button>
+            </form>
         </div>
     </div>
 </div>
