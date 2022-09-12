@@ -53,10 +53,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Numéro</td>
-                <td>Libelle</td>
-                <td>Date</td>
+              <tr *ngFor="let postulant of listPostulant">
+                <td>{{postulant.id_liste_postulants}}</td>
+                <td>{{postulant.libelle_postulants}}</td>
+                <td>{{postulant.date_postulants}}</td>
                 <td>Nombre de tirage</td>
                 <td><a href="#"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
               </tr>
