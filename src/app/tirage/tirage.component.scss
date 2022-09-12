@@ -14,11 +14,17 @@ h1 {
 .import_form {
     width: 40%;
     text-align: left;
+    top: 90px;
+    left: 20px;
+    position:absolute;
 }
 
 .list_form {
     width: 40%;
     text-align: left;
+    top:40px;
+    left: 500px;
+    position: relative;
 }
 
 .form_title {
@@ -38,6 +44,8 @@ h1 {
     float: left;
     padding: 2%;
     box-sizing: border-box;
+    text-align: center;
+    
 }
 
 .form {
@@ -47,8 +55,10 @@ h1 {
 
 .file, .new_list_name, .new_ldraw_name, .ldraw_number, .post_number {
     background-color: #E6E6E6;
-    width: 80%;
+    width: 90%;
     border: none;
+    padding: 2%;
+    margin: -1%;
 }
 
 ::placeholder, ::-ms-input-placeholder {

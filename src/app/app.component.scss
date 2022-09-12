@@ -13,6 +13,18 @@ h1 {
 
 
 
+.bi-clipboard-data-fill::before, 
+.bi-house-fill::before, 
+.bi-pie-chart-fill::before,
+.bi-dice-5::before {
+    color: #FF7900;
+    margin-right: 22px;
+
+}
+ i {
+    font-size: 25px;
+ }
+
 /*li {
     list-style: none;
     margin-left: 0px;
