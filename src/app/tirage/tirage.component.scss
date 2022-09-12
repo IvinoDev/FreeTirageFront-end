@@ -1,3 +1,5 @@
+
+
 h1 {
     color: #FF7900;
     font-weight: 800;
@@ -88,3 +90,47 @@ h1 {
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+input[type="file"] {
+    display: none;
+    width: 90%;
+    
+}
+
+.label_div label {
+
+    background-color: #E6E6E6;
+    width: 86.5%;
+    border: none;
+    justify-content: left;
+    text-align: left;
+    padding: 2%;
+    margin: -1%;
+}
+
+.bi-file-earmark-arrow-up-fill::before {
+    font-size: 17px;
+}
+
+
+
+.lists {
+    width: 94%;
+    background-color: #E6E6E6;
+    border: none;
+    justify-content: left;
+    text-align: left;
+    padding: 2%;
+    margin: -1%;
+}
+
+label {
+    position: absolute;
+    left: 25px;
+    right: 0;
+    top: 30%;
+
+}
+
