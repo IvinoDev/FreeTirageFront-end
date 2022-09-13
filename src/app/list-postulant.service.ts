@@ -12,4 +12,8 @@ export class ListPostulantService {
   getListPostulant() : Observable<object> {
     return this.http.get("http://localhost:8080/liste_postulants/afficher");
   }
+
+  getNombreListe() : Observable<object> {
+    return this.http.get("http://localhost:8080/liste_postulants/nombre");
+  }
 }

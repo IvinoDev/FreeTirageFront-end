@@ -51,37 +51,19 @@
         <table class="table align-middle">
             <thead>
                 <tr>
-                <th>Numéro</th>
-                <th>Libelle</th>
-                <th>Date</th>
-                <th>Action</th>
+                    <th>Numéro</th>
+                    <th>Libelle</th>
+                    <th>Date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <td>1</td>
-                <td>Tirage_1</td>
-                <td>08-08-2022</td>
-                <td><a href="#"><i class="bi bi-plus-circle-fill"></i></a></td>
-            </tr>
-                <tr>
-                <td>1</td>
-                <td>Tirage_1</td>
-                <td>08-08-2022</td>
-                <td><a href="#"><i class="bi bi-plus-circle-fill"></i></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Tirage_1</td>
-                <td>08-09-2022</td>
-                <td><a href="#"><i class="bi bi-plus-circle-fill"></i></a></td>
-            </tr>
-                <tr>
-                <td>1</td>
-                <td>Tirage_1</td>
-                <td>08-08-2022</td>
-                <td><a routerLink="../detailstirage" routerLinkActive="active"><i class="bi bi-plus-circle-fill"></i></a></td>
-            </tr>
+                <tr *ngFor="let tirages of tirage">
+                    <td>{{tirages[0]}}</td>
+                    <td>{{tirages[2]}}</td>
+                    <td>{{tirages[1]}}</td>
+                    <td><a a routerLink="../detailstirage" routerLinkActive="active"><i class="bi bi-plus-circle-fill"></i></a></td>
+                </tr>
             </tbody>
         </table>
     </div>

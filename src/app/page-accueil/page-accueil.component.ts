@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListPostulantService } from '../list-postulant.service';
+import { TirageService } from '../tirage.service';
 
 @Component({
   selector: 'app-page-accueil',
@@ -8,13 +9,26 @@ import { ListPostulantService } from '../list-postulant.service';
 })
 export class PageAccueilComponent implements OnInit {
   listPostulant: any;
+  nombreTirage: any;
+  nombreListe: any;
 
-constructor( private service : ListPostulantService) { }
+constructor( private service : ListPostulantService, private tservice : TirageService) { }
 
   ngOnInit(): void { 
     this.service.getListPostulant().subscribe(data =>{ 
       console.log(data);
-    this.listPostulant = data;
+      this.listPostulant = data;
+    });
+
+    this.tservice.getNombreTirage().subscribe(data =>{ 
+      console.log(data);
+      this.nombreTirage = data;
+
+    });
+
+    this.service.getNombreListe().subscribe(data =>{
+      console.log(data);
+      this.nombreListe = data;
     });
   }
 
