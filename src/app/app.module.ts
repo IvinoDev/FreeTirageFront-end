@@ -10,6 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -28,6 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,8 @@ export class PageAccueilComponent implements OnInit {
   listPostulant: any;
   nombreTirage: any;
   nombreListe: any;
+  p:number=1;
+  searchText:any;
 
 constructor( private service : ListPostulantService, private tservice : TirageService) { }
 

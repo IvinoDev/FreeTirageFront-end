@@ -53,7 +53,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let postulant of listPostulant">
+              <tr *ngFor="let postulant of listPostulant | filter:searchText | paginate:{itemsPerPage :5, currentPage:p}; let id = index">
                 <td>{{postulant[0]}}</td>
                 <td>{{postulant[2]}}</td>
                 <td>{{postulant[1]}}</td>
@@ -62,13 +62,14 @@
               </tr>
             </tbody>
           </table>
-    </div>
+    <!-- </div><pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls> -->
 </div>
 
 <br>
 <div>
-  <button class="button2">1/{{nombreListe}}</button>
-  <a href="#"><button class="button1">Suivant</button></a>
+  <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+  <!-- <button class="button2">1/{{nombreListe}}</button> -->
+  <!-- <a href="#"><button class="button1">Suivant</button></a> -->
 </div>
 
 <a routerLink="../tirage" routerLinkActive="active"><button class="button3">Effectuer un tirage</button></a>
