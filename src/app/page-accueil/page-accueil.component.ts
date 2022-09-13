@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ListPostulantService } from '../list-postulant.service';
+import { ListPostulantService } from '../list-postulant.service';
 
 @Component({
   selector: 'app-page-accueil',
@@ -9,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class PageAccueilComponent implements OnInit {
   listPostulant: any;
 
-  // constructor( private service : ListPostulantService) { }
+constructor( private service : ListPostulantService) { }
 
   ngOnInit(): void { 
-    // this.service.getListPostulant().subscribe(data =>{ 
-    //   this.listPostulant = data;
-    // });
+    this.service.getListPostulant().subscribe(data =>{ 
+      console.log(data);
+    this.listPostulant = data;
+    });
   }
 
 }

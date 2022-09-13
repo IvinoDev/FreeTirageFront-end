@@ -1,5 +1,5 @@
 export class ListPostulant {
-    id_liste_postulants:number = 0;
-    libelle_postulants:string | undefined;
-    date_postulants:string | undefined; 
+    id:number = 0;
+    libelle:string | undefined;
+    date:string | undefined; 
 }

@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ListPostulantService {
 
-  constructor(/**/ private http:HttpClient) { }
-  getListPostulant():Observable<object> {
+  constructor(private http: HttpClient) { }
+  getListPostulant() : Observable<object> {
     return this.http.get("http://localhost:8080/liste_postulants/afficher");
   }
 }

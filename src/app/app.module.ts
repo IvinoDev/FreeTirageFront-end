@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,9 +24,10 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
