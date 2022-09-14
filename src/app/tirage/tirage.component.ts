@@ -26,9 +26,6 @@ export class TirageComponent implements OnInit {
       dateListePostulant:['', Validators.required],
       file:['', Validators.required],
     })
-
-    
-
   }
 
   fileChange(e:any){
@@ -39,8 +36,10 @@ export class TirageComponent implements OnInit {
     this.liste=this.formmodule.value
     this.service.addListe(this.liste.libelle, this.fichier, this.nombre).subscribe(
       data=>{
+        console.log(data)
         this.formmodule.reset()
       }
+      
     )
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TirageService } from '../tirage.service';
 
 @Component({
   selector: 'app-details-tirage',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsTirageComponent implements OnInit {
 
-  constructor() { }
+  id = 0;
+  nombrePostulantsTires = 0;
+
+  constructor(private service: TirageService) { }
 
   ngOnInit(): void {
+    // this.service.getNombrePT(this.id).subscribe(data => {
+    //   console.log(data);
+    //   this.nombrePostulantsTires = data;
+    // }) 
   }
 
 }

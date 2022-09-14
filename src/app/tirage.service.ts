@@ -21,10 +21,15 @@ export class TirageService {
   }
 
   api="http://localhost:8080/liste_postulants/creer"
-  addListe(libelle:string, file:any, nombre:any):Observable<void>{
+  addListe(libelle:string, file:any, nombre:number=0):Observable<void>{
     let data=new FormData();
     data.append("file",file)
     return this.http.post<void>(`${this.api}/${libelle}/${nombre}`, data);
+  }
+
+  apiNPT="http://localhost:8080/tirage/nombre_pt"
+  getNombrePT(id:number): Observable<object> {
+    return this.http.get(`${this.apiNPT}/${id}`);
   }
 } 
 

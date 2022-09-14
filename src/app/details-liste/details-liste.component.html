@@ -54,13 +54,16 @@
                     <th>Numéro</th>
                     <th>Libelle</th>
                     <th>Date</th>
+                    <th>Nombre Tirés</th>
                     <th>Action</th>
+
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let tirages of tirage">
                     <td>{{tirages[0]}}</td>
-                    <td>{{tirages[2]}}</td>
+                    <td>{{tirages[3]}}</td>
+                    <td>{{tirages[2] | date:"dd/MM/yyyy"}}</td>
                     <td>{{tirages[1]}}</td>
                     <td><a a routerLink="../detailstirage" routerLinkActive="active"><i class="bi bi-plus-circle-fill"></i></a></td>
                 </tr>
