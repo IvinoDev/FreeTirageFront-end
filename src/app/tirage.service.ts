@@ -16,7 +16,15 @@ export class TirageService {
 
   getNombreTirage(): Observable<object> {
     return this.http.get("http://localhost:8080/tirage/nombre");
-    
+
+  
+  }
+
+  api="http://localhost:8080/liste_postulants/creer"
+  addListe(libelle:string, file:any, nombre:any):Observable<void>{
+    let data=new FormData();
+    data.append("file",file)
+    return this.http.post<void>(`${this.api}/${libelle}/${nombre}`, data);
   }
 } 
 

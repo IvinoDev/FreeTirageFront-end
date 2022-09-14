@@ -12,6 +12,7 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +32,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BrowserAnimationsModule,
     MatIconModule,
     Ng2SearchPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
