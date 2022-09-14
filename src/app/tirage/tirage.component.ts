@@ -15,6 +15,7 @@ export class TirageComponent implements OnInit {
   fichier:any;
   liste: any;
   nombre: Number=0;
+  msg:any;
 
   constructor(private service : TirageService, private formB:FormBuilder, private http:HttpClient) { }
 
@@ -42,6 +43,11 @@ export class TirageComponent implements OnInit {
       }
       
     )
+    this.afficherMessage()
   }
 
+  afficherMessage(){
+    this.msg = "Tirage effectué avec succès";
+    return this.msg;
+  }
 }
