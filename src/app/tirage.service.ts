@@ -21,7 +21,7 @@ export class TirageService {
   }
 
   api="http://localhost:8080/liste_postulants/creer"
-  addListe(libelle:string, file:any, nombre:number=0):Observable<void>{
+  addListe(libelle:string, file:any, nombre:Number):Observable<void>{
     let data=new FormData();
     data.append("file",file)
     return this.http.post<void>(`${this.api}/${libelle}/${nombre}`, data);

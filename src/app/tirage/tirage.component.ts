@@ -14,7 +14,7 @@ export class TirageComponent implements OnInit {
   file:any;
   fichier:any;
   liste: any;
-  nombre: number = 0;
+  nombre: Number=0;
 
   constructor(private service : TirageService, private formB:FormBuilder, private http:HttpClient) { }
 
@@ -30,9 +30,10 @@ export class TirageComponent implements OnInit {
 
   fileChange(e:any){
     this.fichier=e.target["files"][0]
-    console.log(e.target['files'][0].name+" "+ e.target['files'][0].length)
+    //console.log(e.target['files'][0].name+" "+ e.target['files'][0].length)
   }
   importerliste(){
+    console.log(this.nombre)
     this.liste=this.formmodule.value
     this.service.addListe(this.liste.libelle, this.fichier, this.nombre).subscribe(
       data=>{
