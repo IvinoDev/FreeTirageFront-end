@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DetailsListeComponent } from './details-liste/details-liste.component';
+import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
 
 
 
@@ -32,7 +33,16 @@ const routes: Routes = [
   },
 
   {path: "detailsliste", 
-  component: DetailsListeComponent}
+  component: DetailsListeComponent},
+
+   {
+    path:"",
+    redirectTo : "detailstirage",
+    pathMatch:'full'
+  },
+
+  {path: "detailstirage", 
+  component: DetailsTirageComponent}
 
 
 ];
