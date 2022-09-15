@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ListPostulant } from './list-postulant';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ListPostulantService {
 
   constructor(private http:HttpClient) { }
-  getListPostulant():Observable<Object>{
-    return this.http.get("http://localhost:8080/liste_postulants/afficher")
+  getListPostulant(): Observable<ListPostulant[]>{
+    return this.http.get<[]>("http://localhost:8080/liste_postulants/liste")
   }
 }

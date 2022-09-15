@@ -26,6 +26,7 @@
                 <input type="text" class="ldraw_number" placeholder="Nombre de postulants à tirer">
                 <br>
                 <br>
+                
                 <button class="button4">Importer et tirer</button>
 
             </form>
@@ -42,24 +43,28 @@
             <p>Tirage depuis une liste<br> déjà existante</p>
         </div>
         <div class="form_body">
-            <form action="#">
-                <br>
+            <form (ngSubmit)="onsubmit()" >
+              
+              
                 <!-- <input type="text" class="all_lists" placeholder="Listes"> -->
-                <select class="lists" name="lists">
-                    <option value="">Listes</option>
-                    <option value="Liste 1">Liste 1</option>
-                    <option value="Liste 2">Liste 2</option>
-                    <option value="Liste 3">Liste 3</option>
+                <select class="lists" name="lists" [(ngModel)] ="tirer">
+                    <!-- <div style="width: 100%;" class="label_div">
+                        <label for="file"><i class="bi bi-file-earmark-arrow-up-fill"></i>&nbsp; Choisir un fichier Excel</label>
+                    </div> -->
+                    <option value="text">choisir une liste</option>  
+                    <option *ngFor="let liste of listPostulants">
+                        {{liste.libelle}}
+                    </option>
                 </select>
                 <br>
                 <br>
-                <input type="text" class="new_ldraw_name" placeholder="Libellé du tirage">
+                <input [(ngModel)] ="libelleTirage" name="libelleTirage"  type="text" class="new_ldraw_name" placeholder="Libellé du tirage" ngModel>
                 <br>
                 <br>
-                <input type="text" class="post_number" placeholder="Nombre de postulants à tirer">
+                <input [(ngModel)] ="nbr" name="nbr" type="number" class="post_number"  placeholder="Nombre de postulants à tirer" ngModel>
                 <br>
                 <br>
-                <button class="button4">Effectuer un tirage</button>
+                <button type="submit" class="button4">Effectuer un tirage</button>
             </form>
         </div>
     </div>

@@ -1,14 +1,15 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { DetailsListeComponent } from './details-liste/details-liste.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import { TirageComponent } from './tirage/tirage.component';
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
+import { TirageComponent } from './tirage/tirage.component';
+import {MatIconModule} from '@angular/material/icon';
+import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 
 
 
@@ -16,15 +17,17 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
 @NgModule({
   declarations: [
     AppComponent,
-    PageAccueilComponent,
-    DetailsListeComponent,
     TirageComponent,
+    DetailsListeComponent,
     DetailsTirageComponent,
+    PageAccueilComponent
+   
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    FormsModule,
     MatIconModule
   ],
   providers: [],
