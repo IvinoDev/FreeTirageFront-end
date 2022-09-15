@@ -160,3 +160,10 @@ table.table.align-middle th, table.table.align-middle td {
     margin-bottom: 11px;
     color: #FF7900;
 }
+
+.pagination ::ng-deep .ngx-pagination .current {
+    background-color: #FF7900; }
+
+.ngx-pagination {
+    margin-left: -138px;
+}
