@@ -31,7 +31,7 @@
                 <br>
                 <br>
                 <button (click)="importerliste()" type="submit" class="button4">Importer et tirer</button>
-
+                <p *ngIf="msg != '' " >{{msg}}</p>
             </form>
 
         </div>
@@ -46,21 +46,19 @@
             <p>Tirage depuis une liste<br> déjà existante</p>
         </div>
         <div class="form_body">
-            <form action="#">
+            <form #form = "ngForm" (ngSubmit)="addWithExistList(form)">
                 <br>
                 <!-- <input type="text" class="all_lists" placeholder="Listes"> -->
-                <select class="lists" name="lists">
-                    <option value="">Listes</option>
-                    <option value="Liste 1">Liste 1</option>
-                    <option value="Liste 2">Liste 2</option>
-                    <option value="Liste 3">Liste 3</option>
+                <select value="Listes" class="lists" name="lists" ngModel>
+                    <option value="Listes">Listes</option>
+                    <option *ngFor="let list of lists" value="{{list?.libelle}}">{{list?.libelle}}</option>
                 </select>
                 <br>
                 <br>
-                <input type="text" class="new_ldraw_name" placeholder="Libellé du tirage">
+                <input type="text" class="new_ldraw_name" name="libelle" ngModel placeholder="Libellé du tirage">
                 <br>
                 <br>
-                <input type="text" class="post_number" placeholder="Nombre de postulants à tirer">
+                <input type="text" class="post_number" name="nbrPersonnes" ngModel placeholder="Nombre de postulants à tirer">
                 <br>
                 <br>
                 <button type="submit" class="button4">Effectuer un tirage</button>

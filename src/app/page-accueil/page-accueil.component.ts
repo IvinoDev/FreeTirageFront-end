@@ -14,24 +14,29 @@ export class PageAccueilComponent implements OnInit {
   p:number=1;
   searchText:any;
 
-constructor( private service : ListPostulantService, private tservice : TirageService) { }
+  constructor( private service : ListPostulantService, private tservice :TirageService ) { }
 
   ngOnInit(): void { 
     this.service.getListPostulant().subscribe(data =>{ 
-      console.log(data);
-      this.listPostulant = data;
-    });
+    this.listPostulant = data;
+     });
 
-    this.tservice.getNombreTirage().subscribe(data =>{ 
-      console.log(data);
+     this.tservice.getNombreTirage().subscribe(data => {
       this.nombreTirage = data;
-
-    });
-
-    this.service.getNombreListe().subscribe(data =>{
+     })
+     
+      this.service.getNombreListe().subscribe(data =>{
       console.log(data);
       this.nombreListe = data;
     });
+    
+  
   }
+
+    detailsParListe(id:any) {
+      console.log(id);
+    
+      
+    }
 
 }

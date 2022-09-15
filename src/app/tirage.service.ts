@@ -31,5 +31,17 @@ export class TirageService {
   getNombrePT(id:number): Observable<object> {
     return this.http.get(`${this.apiNPT}/${id}`);
   }
+
+  getListExist() {
+    return this.http.get("http://localhost:8080/liste_postulants/listes");
+  }
+
+  withExistList(tirage:any, libelle:string, nombre:number){
+    return this.http.post("http://localhost:8080/liste_postulants/ajout_le/" + libelle + "/" + nombre, tirage)
+  }
+
+  tirageByList(id: number){
+    return this.http.get("http://localhost:8080/tirage/liste/" + id);
+  }
 } 
 

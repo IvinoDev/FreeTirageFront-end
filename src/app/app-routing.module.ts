@@ -26,13 +26,8 @@ const routes: Routes = [
    {path: "tirage", 
   component: TirageComponent},
 
-  {
-    path:"",
-    redirectTo : "detailsliste",
-    pathMatch:'full'
-  },
 
-  {path: "detailsliste", 
+  {path: "details/:id", 
   component: DetailsListeComponent},
 
    {
