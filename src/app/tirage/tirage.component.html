@@ -34,13 +34,9 @@
                 <button (click)="importerliste()" type="submit" class="button4">Importer et tirer</button>
                 <br>
                 <br>
-
                 <p  style="margin: 0!important; padding: 0;" *ngIf="msg != '' " >{{msg}}</p>
             </form>
-
         </div>
-       
-
     </div>
 
 
@@ -67,7 +63,7 @@
                 <input type="text" class="post_number" name="nbrPersonnes" ngModel placeholder="Nombre de postulants à tirer">
                 <br>
                 <br>
-                <button type="submit" class="button4">Effectuer un tirage</button>
+                <button (click)="importerliste()" type="submit" class="button4">Effectuer un tirage</button>
             </form>
         </div>
     </div>
