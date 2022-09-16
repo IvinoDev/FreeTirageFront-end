@@ -10,6 +10,7 @@
         <div class="form_body">
             <form [formGroup]="formmodule">
                 <br>
+                <br>
                 <input type="file" id="file" name="file" accept=".csv,
                  application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
                  application/vnd.ms-excel" formControlName="file" (change)="fileChange($event)">
@@ -32,13 +33,12 @@
                 <br>
                 <button (click)="importerliste()" type="submit" class="button4">Importer et tirer</button>
                 <br>
+                <br>
+                <p  style="margin: 0!important; padding: 0;" *ngIf="msg != '' " >{{msg}}</p>
             </form>
-
         </div>
-       
-
     </div>
-    <div>  <p style="margin: 0;" *ngIf="msg != '' " >{{msg}}</p></div>
+
 
 
 
@@ -51,8 +51,8 @@
             <form #form = "ngForm" (ngSubmit)="addWithExistList(form)">
                 <br>
                 <!-- <input type="text" class="all_lists" placeholder="Listes"> -->
-                <select value="Listes" class="lists" name="lists" ngModel>
-                    <option value="Listes">Listes</option>
+                <select  class="lists" name="lists" ngModel>
+                    <option value="Listes">choisir une liste</option>
                     <option *ngFor="let list of lists" value="{{list?.libelle}}">{{list?.libelle}}</option>
                 </select>
                 <br>
@@ -63,7 +63,7 @@
                 <input type="text" class="post_number" name="nbrPersonnes" ngModel placeholder="Nombre de postulants à tirer">
                 <br>
                 <br>
-                <button type="submit" class="button4">Effectuer un tirage</button>
+                <button (click)="importerliste()" type="submit" class="button4">Effectuer un tirage</button>
             </form>
         </div>
     </div>

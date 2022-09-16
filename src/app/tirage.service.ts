@@ -38,7 +38,7 @@ export class TirageService {
 
 
   getListExist() {
-    return this.http.get("http://localhost:8080/liste_postulants/listes");
+    return this.http.get("http://localhost:8080/liste_postulants/trouverLister");
   }
 
   withExistList(tirage:any, libelle:string, nombre:number){

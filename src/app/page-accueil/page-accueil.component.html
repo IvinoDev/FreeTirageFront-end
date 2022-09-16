@@ -39,6 +39,7 @@
 </div>
 
 <div class="top_lists">
+<<<<<<< HEAD
   <h2>Top listes</h2>
   <br>
   <div class="main_list">
@@ -69,14 +70,53 @@
           </tbody>
         </table>
   <!-- </div><pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls> -->
+=======
+    <h2>Top listes</h2>
+    <br>
+    <div class="main_list">
+        <table class="table align-middle">
+            <thead>
+              <tr >
+                <th>Numero</th>
+                <th>Libelle</th>
+                <th>Date</th>
+                <th>Nombre de tirage</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let postulant of listPostulant | filter:searchText | paginate:{itemsPerPage :5, currentPage:p}; let id = index">
+                <td>{{postulant[0]}}</td>
+                <td>{{postulant[2]}}</td>
+                <td>{{postulant[1] | date:"dd/MM/yyyy"}}</td>
+                <td>{{postulant[0]}}</td>
+
+                <td><a routerLink="../details/{{postulant[0]}}" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
+
+               <!--
+<td><a routerLink="/details/{{postulant[0]}}" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
+               --> 
+
+              </tr>
+            </tbody>
+          </table>
+    <!-- </div><pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls> -->
+>>>>>>> 4edde8c93820f087a9f5a9b89d76dea04b3da281
 </div>
 
 <br>
 <div class="paginatione">
+<<<<<<< HEAD
 <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
 
 <!-- <button class="button2">1/{{nombreListe}}</button> -->
 <!-- <a href="#"><button class="button1">Suivant</button></a> -->
+=======
+  <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+
+  <!-- <button class="button2">1/{{nombreListe}}</button> -->
+  <!-- <a href="#"><button class="button1">Suivant</button></a> -->
+>>>>>>> 4edde8c93820f087a9f5a9b89d76dea04b3da281
 </div>
 
 <a routerLink="/tirage" routerLinkActive="active"><button class="button3">Effectuer un tirage</button></a>
