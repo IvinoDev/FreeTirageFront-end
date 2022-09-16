@@ -1,75 +1,82 @@
 <div class="first_heading">
-    <br>
-    <h1>Bienvenue sur FreeTirage</h1>
-    <p>La meilleure plateforme pour faire un tirage</p>
-    <br>
-    <!-- <app-details-liste></app-details-liste> pour injecter un component-->
+  <br>
+  <h1>Bienvenue sur FreeTirage</h1>
+  <p>La meilleure plateforme pour faire un tirage</p>
+  <br>
+  <!-- <app-details-liste></app-details-liste> pour injecter un component-->
 </div>
 
 <div class="stats">
-    <h1 class="statistique">Nos Statistiques</h1>
-    <div class="stats_main">
-      <div class="stats-container">
-        <div class="stat">
-          <div class="stat-title">
-            <h2>Total des listes</h2>
-          </div>
-          <div class="stat-body">
-            <div class="number">{{nombreListe}}</div>
-            <div class="icon"><i class="bi bi-list-columns"></i></div>
-            <div class="text">
-              <p>Listes tirées</p>
-            </div>
+  <h1 class="statistique">Nos Statistiques</h1>
+  <div class="stats_main">
+    <div class="stats-container">
+      <div class="stat">
+        <div class="stat-title">
+          <h2>Total des listes</h2>
+        </div>
+        <div class="stat-body">
+          <div class="number">{{nombreListe}}</div>
+          <div class="icon"><i class="bi bi-list-columns"></i></div>
+          <div class="text">
+            <p>Listes tirées</p>
           </div>
         </div>
-        <div class="stat">
-          <div class="stat-title">
-            <h2>Total des tirages</h2>
-          </div>
-          <div class="stat-body">
-            <div class="number">{{nombreTirage}}</div>
-            <div class="icon"><i class="bi bi-dice-2"></i></div>
-            <div class="text">
-              <p>Tirages effectués</p>
-            </div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">
+          <h2>Total des tirages</h2>
+        </div>
+        <div class="stat-body">
+          <div class="number">{{nombreTirage}}</div>
+          <div class="icon"><i class="bi bi-dice-2"></i></div>
+          <div class="text">
+            <p>Tirages effectués</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 <div class="top_lists">
-    <h2>Top listes</h2>
-    <br>
-    <div class="main_list">
-        <table class="table align-middle">
-            <thead>
-              <tr >
-                <th>Numero</th>
-                <th>Libelle</th>
-                <th>Date</th>
-                <th>Nombre de tirage</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let postulant of listPostulant | filter:searchText | paginate:{itemsPerPage :5, currentPage:p}; let id = index">
-                <td>{{postulant[0]}}</td>
-                <td>{{postulant[2]}}</td>
-                <td>{{postulant[1] | date:"dd/MM/yyyy"}}</td>
-                <td>{{postulant[0]}}</td>
-                <td><a routerLink="/details/{{postulant[0]}}" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
-              </tr>
-            </tbody>
-          </table>
-    <!-- </div><pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls> -->
+  <h2>Top listes</h2>
+  <br>
+  <div class="main_list">
+      <table class="table align-middle">
+          <thead>
+            <tr >
+              <th>Numero</th>
+              <th>Libelle</th>
+              <th>Date</th>
+              <th>Nombre de tirage</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let postulant of listPostulant | filter:searchText | paginate:{itemsPerPage :5, currentPage:p}; let id = index">
+              <td>{{postulant[0]}}</td>
+              <td>{{postulant[2]}}</td>
+              <td>{{postulant[1] | date:"dd/MM/yyyy"}}</td>
+              <td>{{postulant[0]}}</td>
+
+              <td><a routerLink="../details/{{postulant[0]}}" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
+
+             <!--
+<td><a routerLink="/details/{{postulant[0]}}" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
+             --> 
+
+            </tr>
+          </tbody>
+        </table>
+  <!-- </div><pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls> -->
 </div>
 
 <br>
-<div>
-  <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
-  <!-- <button class="button2">1/{{nombreListe}}</button> -->
-  <!-- <a href="#"><button class="button1">Suivant</button></a> -->
+<div class="paginatione">
+<pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+
+<!-- <button class="button2">1/{{nombreListe}}</button> -->
+<!-- <a href="#"><button class="button1">Suivant</button></a> -->
 </div>
 
 <a routerLink="/tirage" routerLinkActive="active"><button class="button3">Effectuer un tirage</button></a>

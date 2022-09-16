@@ -36,7 +36,7 @@ const routes: Routes = [
     pathMatch:'full'
   },
 
-  {path: "detailstirage", 
+  {path: "detailstirage/:id", 
   component: DetailsTirageComponent}
 
 

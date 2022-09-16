@@ -1,5 +1,5 @@
 export class ListPostulant {
     id:number = 0;
-    libelle:string | undefined;
-    date:string | undefined; 
+    libelle!:string 
+    date!:string  
 }
