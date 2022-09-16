@@ -20,6 +20,7 @@ export class DetailsListeComponent implements OnInit {
     this.id = this.activateRoute.snapshot.params["id"];
     this.getTirageByList();
     this.serviceLp.getById(this.id).subscribe(data => {
+      console.log(data)
       this.liste = data;
     }); 
    
