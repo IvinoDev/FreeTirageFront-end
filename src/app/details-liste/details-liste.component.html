@@ -61,11 +61,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let tirages of tirage">
-                    <td>{{tirages?.id}}</td>
-                    <td>{{tirages?.libelle}}</td>
-                    <td>{{tirages?.date | date:"dd/MM/yyyy"}}</td>
-                    <td>{{tirages?.nptire}}</td>
-                    <td><a a routerLink="/detailstirage" routerLinkActive="active"><i class="bi bi-plus-circle-fill"></i></a></td>
+                    <td>{{tirages.id}}</td>
+                    <td>{{tirages.libelle}}</td>
+                    <td>{{tirages.date | date:"dd/MM/yyyy"}}</td>
+                    <td>{{tirages.nptire}}</td>
+                    <td><a a routerLink="../detailstirage" routerLinkActive="active"><i class="bi bi-plus-circle-fill"></i></a></td>
                 </tr>
             </tbody>
         </table>
