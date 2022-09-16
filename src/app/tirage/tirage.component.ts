@@ -63,6 +63,7 @@ export class TirageComponent implements OnInit {
     });
 
   }
+  
 
 
 }

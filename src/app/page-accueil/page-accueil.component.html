@@ -58,7 +58,7 @@
                 <td>{{postulant[2]}}</td>
                 <td>{{postulant[1] | date:"dd/MM/yyyy"}}</td>
                 <td>{{postulant[0]}}</td>
-                <td><a routerLink="/details/:id" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
+                <td><a routerLink="/details/{{postulant[0]}}" routerLinkActive="active"><mat-icon class='info' fontIcon="info"></mat-icon></a></td>
               </tr>
             </tbody>
           </table>
