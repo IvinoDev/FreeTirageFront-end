@@ -1,4 +1,4 @@
-# FreeTirage
+# 🎲🎲 FreeTirage
 
 This project was made with Angular version 14.2.1.
 
